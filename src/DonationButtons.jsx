@@ -23,19 +23,19 @@ const DonationButtons = () => {
         </button>
         <button
           onClick={() => scrollToForm(stuffDonationFormRef)}
-          className="px-16 py-2.5 text-black bg-white rounded-md border border-black hover:bg-blue-600 transition-colors"
+          className="px-10 py-2.5 text-black bg-white rounded-md border border-black hover:bg-blue-600 transition-colors"
         >
           Stuff
         </button>
       </div>
 
       {/* Donation Form Section */}
-      <div ref={donationFormRef} className="mt-8 p-4 border rounded-md" id="donationForm">
+      <div ref={donationFormRef} className="mt-8 p-4 " id="donationForm">
         <DonationForm />
       </div>
 
       {/* Stuff Donation Form Section */}
-      <div ref={stuffDonationFormRef} className="mt-8 p-4 border rounded-md" id="stuffDonationForm">
+      <div ref={stuffDonationFormRef} className="mt-8 p-4 " id="stuffDonationForm">
         <StuffDonationForm />
       </div>
     </div>

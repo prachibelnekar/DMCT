@@ -2,28 +2,26 @@ import React from 'react';
 
 const StuffDonationForm = () => {
   return (
-    <section className="flex justify-center items-center h-screen bg-gray-100">
-      <div className="flex flex-col justify-center items-center p-10 bg-white rounded-2xl border border-blue-400 w-[884px] max-md:px-5 max-md:w-full">
+    <div className="flex justify-center items-center ">
+      <div className="flex flex-col justify-center items-center p-10 bg-white rounded-2xl border border-blue-400 w-[500px] max-md:px-5 max-md:w-full">
         <form className="w-full max-w-md space-y-6">
           {/* Contact Name */}
           <div className="flex flex-col">
-            <label htmlFor="contactName" className="text-sm text-gray-700 font-semibold">Contact Name</label>
+            <label htmlFor="name" className="text-sm text-gray-700 font-semibold">Your Name</label>
             <input 
               type="text" 
-              id="contactName" 
+              id="name" 
               placeholder='Your Name'
               className="mt-1 px-4 py-2 w-full border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" 
             />
           </div>
 
-          {/* Street */}
+          {/* Address */}
           <div className="flex flex-col">
-            <label htmlFor="street" className="text-sm text-gray-700 font-semibold">Street</label>
-            <input 
-              type="text" 
-              id="street" 
-              placeholder='Street 12'
-              className="mt-1 px-4 py-2 w-full border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" 
+            <label htmlFor="address" className="text-sm text-gray-700 font-semibold">Address</label>
+            <textarea 
+              id="address" 
+              className="mt-1 px-3 py-2 w-full border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 h-20 resize-none" 
             />
           </div>
 
@@ -39,10 +37,10 @@ const StuffDonationForm = () => {
               />
             </div>
             <div className="flex flex-col w-1/2">
-              <label htmlFor="postcode" className="text-sm text-gray-700 font-semibold">Postcode</label>
+              <label htmlFor="postcode" className="text-sm text-gray-700 font-semibold">Pin Code</label>
               <input 
                 type="number" 
-                id="postcode" 
+                id="pincode" 
                 placeholder='400231'
                 className="mt-1 px-4 py-2 w-full border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" 
               />
@@ -51,10 +49,10 @@ const StuffDonationForm = () => {
 
           {/* Phone */}
           <div className="flex flex-col">
-            <label htmlFor="contactPhone" className="text-sm text-gray-700 font-semibold">Contact Phone</label>
+            <label htmlFor="Phone" className="text-sm text-gray-700 font-semibold">Contact No.</label>
             <input 
               type="tel" 
-              id="contactPhone" 
+              id="Phone" 
               placeholder='1234567899'
               className="mt-1 px-4 py-2 w-full border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" 
             />
@@ -73,35 +71,46 @@ const StuffDonationForm = () => {
 
           {/* Idea */}
           <div className="flex flex-col">
-            <label htmlFor="idea" className="text-sm text-gray-700 font-semibold">Tell Us About Your Idea</label>
+            <label htmlFor="idea" className="text-sm text-gray-700 font-semibold">What would you like to donate?</label>
             <textarea 
               id="idea" 
-              className="mt-1 px-3 py-2 w-full border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 h-28 resize-none" 
+              className="mt-1 px-3 py-2 w-full border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 h-12 resize-none" 
             />
           </div>
 
           {/* File Uploads */}
           <div className="flex flex-col space-y-4">
-            <div className="flex items-center justify-between border-dashed border-2 border-gray-300 p-4 rounded-lg">
+            <div className="flex items-center justify-between border-dashed border-2 border-gray-300 p-1 rounded-lg">
               <label htmlFor="file1" className="text-gray-600 cursor-pointer flex items-center">
                 <img 
                   src="https://cdn.builder.io/api/v1/image/assets/TEMP/2f440347c849c5017309b81cd4820fe345e2391fbbe5ef88418acc84e7753583" 
                   alt="upload icon" 
-                  className="w-6 h-6 mr-2"
+                  className="w-6 h-4 mr-2"
                 />
-                Upload Additional File
+                Upload Top View
               </label>
               <input type="file" id="file1" className="sr-only" />
             </div>
 
-            <div className="flex items-center justify-between border-dashed border-2 border-gray-300 p-4 rounded-lg">
+            <div className="flex items-center justify-between border-dashed border-2 border-gray-300 p-1 rounded-lg">
               <label htmlFor="file2" className="text-gray-600 cursor-pointer flex items-center">
                 <img 
                   src="https://cdn.builder.io/api/v1/image/assets/TEMP/2f440347c849c5017309b81cd4820fe345e2391fbbe5ef88418acc84e7753583" 
                   alt="upload icon" 
-                  className="w-6 h-6 mr-2"
+                  className="w-6 h-4 mr-2"
                 />
-                Upload Additional File
+                Upload Front View
+              </label>
+              <input type="file" id="file2" className="sr-only" />
+            </div>
+            <div className="flex items-center justify-between border-dashed border-2 border-gray-300 p-1 rounded-lg">
+              <label htmlFor="file2" className="text-gray-600 cursor-pointer flex items-center">
+                <img 
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/2f440347c849c5017309b81cd4820fe345e2391fbbe5ef88418acc84e7753583" 
+                  alt="upload icon" 
+                  className="w-6 h-4 mr-2"
+                />
+                Upload Side View
               </label>
               <input type="file" id="file2" className="sr-only" />
             </div>
@@ -122,7 +131,7 @@ const StuffDonationForm = () => {
         
         
       </div>
-    </section>
+    </div>
   );
 };
 

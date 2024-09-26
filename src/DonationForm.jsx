@@ -6,11 +6,11 @@ import { PiBankFill } from "react-icons/pi";
 const DonationForm = () => {
   return (
     <>
-    <div className="flex justify-center items-center  bg-white ">
+    <div className="flex justify-center items-center   ">
       {/* Donation Form */}
-      <div className="flex flex-col justify-center items-center p-8 mx-5 w-full rounded-2xl border border-sky-500 max-w-[1232px] max-md:px-2 max-md:max-w-full bg-white shadow-lg">
-        <form className="w-full rounded-md border border-zinc-200 ">
-          <div className="flex flex-col gap-6 items-center p-8 bg-slate-50 rounded-md max-md:max-w-full">
+      <div className="flex flex-col justify-center items-center p-4 mx-5 w-full rounded-2xl border border-sky-500 max-w-[600px] max-md:px-2 max-md:max-w-full bg-white shadow-lg">
+        <form className="w-full   ">
+          <div className="flex flex-col gap-6 items-center p-4  max-md:max-w-full">
             {/* Payment Options */}
             <div className="flex flex-wrap gap-4 max-w-full justify-center">
               {/* Credit Card Option */}
@@ -20,14 +20,14 @@ const DonationForm = () => {
               </div>
 
               {/* Paytm Option */}
-              <div className="flex flex-col items-center border p-4 rounded-lg w-32 shadow-md">
-                <SiPaytm className="text-4xl" aria-label="Google Pay" />
-                <span className="mt-2">Google Pay</span>
+              <div className="flex flex-col items-center border p-4 rounded-lg w-32 shadow-md ">
+                <SiPaytm className="text-4xl" aria-label="Pay" />
+                <span className="mt-2">Pay</span>
               </div>
 
               {/* Bank Account Option */}
               <div className="flex flex-col items-center border p-4 rounded-lg w-32 shadow-md">
-                <PiBankFill className="text-4xl" aria-label="US Bank Account" />
+                <PiBankFill className="text-4xl" aria-label="Bank" />
                 <span className="mt-2">Bank</span>
               </div>
             </div>
