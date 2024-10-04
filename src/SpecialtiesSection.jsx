@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { IoIosArrowDropdown } from "react-icons/io";
+import Nurse_Patient from '../src/images/Nurse_Patient.jpg';
 
 const SpecialtiesSection = () => {
   const specialties = [
@@ -25,26 +26,57 @@ const SpecialtiesSection = () => {
   };
 
   const [hoveredSpecialty, setHoveredSpecialty] = useState(null);
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const [entry] = entries;
+        if (entry.isIntersecting) {
+          setIsVisible(true); // Trigger animation when visible
+        } else {
+          setIsVisible(false); // Reset animation when out of view
+        }
+      },
+      {
+        root: null, // Use the viewport as the root
+        threshold: 0.2, // Trigger when 20% of the section is visible
+      }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
 
   return (
-    <section className="w-full max-md:max-w-full relative">
-      <div className="flex gap-5 max-md:flex-col">
-        <div className="flex flex-col w-6/12 max-md:ml-0 max-md:w-full ml-10">
+    <div ref={sectionRef} className="w-full max-md:max-w-full relative mt-28 select-none">
+      <div className="flex max-md:flex-col">
+        {/* Image Section */}
+        <div className={`flex flex-col w-6/12 max-md:w-full max-md:ml-0 ml-16 ${isVisible ? 'animate-slideInLeft' : ''}`}>
           <img
-            loading="lazy"
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/299b073d3a80b7cf914e93ac856c94537155de616d20a38f3e45687bb67cbbd2?placeholderIfAbsent=true&apiKey=ecbe1396c2284b6a90ede3eda49be9ce"
-            alt="Hospital specialties"
-            className="object-contain self-stretch my-auto w-full aspect-[1.36] max-md:mt-10 max-md:max-w-full"
+            src={Nurse_Patient}
+            alt="Nurse and Patient"
+            className="w-full h-[500px] max-md:h-auto max-md:mt-5 mt-10 object-cover"
           />
         </div>
-        <div className="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full relative mr-10">
+
+        {/* Specialties Section */}
+        <div className={`flex flex-col w-6/12 max-md:w-full max-md:ml-0 ml-5 relative mr-10 ${isVisible ? 'animate-slideInRight' : ''}`}>
           <div className="flex flex-col grow pt-12 pb-24 w-full font-bold text-white bg-sky-500 max-md:max-w-full relative">
-            <h2 className="ml-7 text-4xl text-center">Our Specialties</h2>
-            <div className="grid grid-cols-2 gap-x-10 gap-y-10 text-2xl mt-20  ml-16 mr-16 mtext-2xl max-md:px-5 max-md:mt-10 max-md:max-w-full relative">
+            <h2 className="ml-7 text-4xl text-center max-md:text-3xl">Our Specialties</h2>
+            <div className="grid grid-cols-2 gap-x-10 gap-y-10 text-2xl mt-20 ml-16 mr-16 max-md:grid-cols-1 max-md:gap-y-8 max-md:px-5 max-md:mt-10 relative">
               {specialties.map((specialty, index) => (
                 <div
                   key={index}
-                  className="relative z-10 cursor-pointer flex items-center"
+                  className="relative cursor-pointer flex items-center"
                   onMouseEnter={() => setHoveredSpecialty(specialty)}
                   onMouseLeave={() => setHoveredSpecialty(null)}
                 >
@@ -53,20 +85,21 @@ const SpecialtiesSection = () => {
                   {/* Tooltip on hover */}
                   {hoveredSpecialty === specialty && (
                     <div
-                      className="absolute top-10 left-0 mt-2 p-4 bg-white border border-slate-950 rounded-lg text-black w-full shadow-lg"
-                      style={{ zIndex: 9999 }} // Ensure it appears over everything
+                      className="absolute top-10 left-0 mt-2 p-4 bg-white border border-slate-950 rounded-lg text-black w-full shadow-lg max-md:left-auto max-md:right-0 max-md:h-auto max-md:top-8 max-md:bottom-auto max-md:text-base"
+                      style={{ zIndex: 9999 }} // Ensure it appears above everything
                     >
-                      <h3 className="text-xl  mb-2">{specialty}</h3>
-                      <p>{specialtyDetails[specialty]}</p>
+                      <h3 className="text-xl mb-2 max-md:text-xl">{specialty}</h3>
+                      <p className="">{specialtyDetails[specialty]}</p>
                     </div>
                   )}
+
                 </div>
               ))}
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

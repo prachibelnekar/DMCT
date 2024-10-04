@@ -8,20 +8,26 @@ import OurGallery from './OurGallery.jsx';
 import Navigation from './Navigation.jsx';
 import ContactUs from './ContactUs.jsx';
 import DonateNow from './DonateNow.jsx';
+import Our_Gallery2 from './Our_Gallery2.jsx'
+import StuffDonationForm from './StuffDonationForm.jsx';
+import DonationForm from './DonationForm.jsx';
 
 
 const MainContent = () => {
   return (
     <Router>
-        <Header/>
+        {/* <Header/> */}
         <Navigation/>
         <Routes>
           <Route path="/" element={<Home/>} />
           <Route path="/about" element={<About/>} />
           <Route path="/our_team" element={<OurTeam/>} />
-          <Route path="/our_gallery" element={<OurGallery/>} />
+          <Route path="/our_gallery2" element={<Our_Gallery2/>} />
           <Route path="/contact_us" element={<ContactUs/>} />
-          <Route path="/donate_now" element={<DonateNow/>} />
+          <Route path="/donate_now" element={<DonationForm/>} />
+          <Route path="/our_gallery2/admin/*" element={<OurGallery />}/>
+          <Route path='/DonationForm' element={<StuffDonationForm/>}/>
+          <Route path='/DonationPayment' element={<DonationForm/>}/>
         </Routes>
         
       </Router>

@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { IoLocationOutline } from "react-icons/io5";
 import { MdOutlineAddIcCall } from "react-icons/md";
 import { CiMail } from "react-icons/ci";
+import contact from '../src/images/contact.png';
 
 const ContactDetails = () => {
   return (
@@ -12,7 +13,7 @@ const ContactDetails = () => {
           <div className="flex gap-10 items-center self-stretch my-auto max-md:mt-10 max-md:max-w-full">
             <img
               loading="lazy"
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/803c6c6d165002d72d893062996ed0b2cd0dbd736f38f0e8e953518a717aaafd?placeholderIfAbsent=true&apiKey=ecbe1396c2284b6a90ede3eda49be9ce"
+              src={contact}
               alt="DMCT Oldage Hospital building or staff"
               className="object-contain self-stretch my-auto aspect-[0.93] min-w-[240px] w-[608px]"
             />

@@ -39,3 +39,151 @@ function WorkSection() {
 }
 
 export default WorkSection;
+
+// import React from 'react';
+
+// import Footer from './Footer.jsx';
+
+// const OurGallery = () => {
+//   return (
+//     <>
+//       <div className="flex flex-col overflow-hidden bg-white">
+        
+
+//         {/* Grid for images */}
+//         <div className="grid grid-cols-1 gap-6 p-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-3">
+//           {/* Image 1 */}
+//           <div className="overflow-hidden rounded-lg shadow-lg transition-transform transform hover:scale-105">
+//             <img
+//               loading="lazy"
+//               src="https://cdn.builder.io/api/v1/image/assets/TEMP/501e9b46bba1eaadf772d408c6874dd7f5cbc7e63359721f479d8a2226d4d9dc?placeholderIfAbsent=true&apiKey=ecbe1396c2284b6a90ede3eda49be9ce"
+//               alt="Hospital Facility"
+//               className="object-cover w-full h-60"
+//             />
+//           </div>
+
+//           {/* Image 2 */}
+//           <div className="overflow-hidden rounded-lg shadow-lg transition-transform transform hover:scale-105">
+//             <img
+//               loading="lazy"
+//               src="https://cdn.builder.io/api/v1/image/assets/TEMP/b8134dc08ac54291ce062e22fc0e3937f727deffbc8d0931bc1041c08787b6ba?placeholderIfAbsent=true&apiKey=ecbe1396c2284b6a90ede3eda49be9ce"
+//               alt="Hospital Services"
+//               className="object-cover w-full h-60"
+//             />
+//           </div>
+
+//           {/* Add more images in a similar way */}
+//           <div className="overflow-hidden rounded-lg shadow-lg transition-transform transform hover:scale-105">
+//             <img
+//               loading="lazy"
+//               src="https://cdn.builder.io/api/v1/image/assets/TEMP/501e9b46bba1eaadf772d408c6874dd7f5cbc7e63359721f479d8a2226d4d9dc?placeholderIfAbsent=true&apiKey=ecbe1396c2284b6a90ede3eda49be9ce"
+//               alt="Hospital Facility"
+//               className="object-cover w-full h-60"
+//             />
+//           </div>
+
+//           <div className="overflow-hidden rounded-lg shadow-lg transition-transform transform hover:scale-105">
+//             <img
+//               loading="lazy"
+//               src="https://cdn.builder.io/api/v1/image/assets/TEMP/b8134dc08ac54291ce062e22fc0e3937f727deffbc8d0931bc1041c08787b6ba?placeholderIfAbsent=true&apiKey=ecbe1396c2284b6a90ede3eda49be9ce"
+//               alt="Hospital Services"
+//               className="object-cover w-full h-60"
+//             />
+//           </div>
+//                     {/* Image 1 */}
+//                     <div className="overflow-hidden rounded-lg shadow-lg transition-transform transform hover:scale-105">
+//             <img
+//               loading="lazy"
+//               src="https://cdn.builder.io/api/v1/image/assets/TEMP/501e9b46bba1eaadf772d408c6874dd7f5cbc7e63359721f479d8a2226d4d9dc?placeholderIfAbsent=true&apiKey=ecbe1396c2284b6a90ede3eda49be9ce"
+//               alt="Hospital Facility"
+//               className="object-cover w-full h-60"
+//             />
+//           </div>
+
+//           {/* Image 2 */}
+//           <div className="overflow-hidden rounded-lg shadow-lg transition-transform transform hover:scale-105">
+//             <img
+//               loading="lazy"
+//               src="https://cdn.builder.io/api/v1/image/assets/TEMP/b8134dc08ac54291ce062e22fc0e3937f727deffbc8d0931bc1041c08787b6ba?placeholderIfAbsent=true&apiKey=ecbe1396c2284b6a90ede3eda49be9ce"
+//               alt="Hospital Services"
+//               className="object-cover w-full h-60"
+//             />
+//           </div>
+
+//           {/* Add more images in a similar way */}
+//           <div className="overflow-hidden rounded-lg shadow-lg transition-transform transform hover:scale-105">
+//             <img
+//               loading="lazy"
+//               src="https://cdn.builder.io/api/v1/image/assets/TEMP/501e9b46bba1eaadf772d408c6874dd7f5cbc7e63359721f479d8a2226d4d9dc?placeholderIfAbsent=true&apiKey=ecbe1396c2284b6a90ede3eda49be9ce"
+//               alt="Hospital Facility"
+//               className="object-cover w-full h-60"
+//             />
+//           </div>
+
+//           <div className="overflow-hidden rounded-lg shadow-lg transition-transform transform hover:scale-105">
+//             <img
+//               loading="lazy"
+//               src="https://cdn.builder.io/api/v1/image/assets/TEMP/b8134dc08ac54291ce062e22fc0e3937f727deffbc8d0931bc1041c08787b6ba?placeholderIfAbsent=true&apiKey=ecbe1396c2284b6a90ede3eda49be9ce"
+//               alt="Hospital Services"
+//               className="object-cover w-full h-60"
+//             />
+//           </div>
+//                     {/* Image 1 */}
+//                     <div className="overflow-hidden rounded-lg shadow-lg transition-transform transform hover:scale-105">
+//             <img
+//               loading="lazy"
+//               src="https://cdn.builder.io/api/v1/image/assets/TEMP/501e9b46bba1eaadf772d408c6874dd7f5cbc7e63359721f479d8a2226d4d9dc?placeholderIfAbsent=true&apiKey=ecbe1396c2284b6a90ede3eda49be9ce"
+//               alt="Hospital Facility"
+//               className="object-cover w-full h-60"
+//             />
+//           </div>
+
+//           {/* Image 2 */}
+//           <div className="overflow-hidden rounded-lg shadow-lg transition-transform transform hover:scale-105">
+//             <img
+//               loading="lazy"
+//               src="https://cdn.builder.io/api/v1/image/assets/TEMP/b8134dc08ac54291ce062e22fc0e3937f727deffbc8d0931bc1041c08787b6ba?placeholderIfAbsent=true&apiKey=ecbe1396c2284b6a90ede3eda49be9ce"
+//               alt="Hospital Services"
+//               className="object-cover w-full h-60"
+//             />
+//           </div>
+
+//           {/* Add more images in a similar way */}
+//           <div className="overflow-hidden rounded-lg shadow-lg transition-transform transform hover:scale-105">
+//             <img
+//               loading="lazy"
+//               src="https://cdn.builder.io/api/v1/image/assets/TEMP/501e9b46bba1eaadf772d408c6874dd7f5cbc7e63359721f479d8a2226d4d9dc?placeholderIfAbsent=true&apiKey=ecbe1396c2284b6a90ede3eda49be9ce"
+//               alt="Hospital Facility"
+//               className="object-cover w-full h-60"
+//             />
+//           </div>
+
+//           <div className="overflow-hidden rounded-lg shadow-lg transition-transform transform hover:scale-105">
+//             <img
+//               loading="lazy"
+//               src="https://cdn.builder.io/api/v1/image/assets/TEMP/b8134dc08ac54291ce062e22fc0e3937f727deffbc8d0931bc1041c08787b6ba?placeholderIfAbsent=true&apiKey=ecbe1396c2284b6a90ede3eda49be9ce"
+//               alt="Hospital Services"
+//               className="object-cover w-full h-60"
+//             />
+//           </div>
+
+//           {/* Repeat the above block for additional images to fill the grid */}
+//         </div>
+
+//         {/* Scroll to top button */}
+//         <a href="#top" aria-label="Scroll to top">
+//           <img
+//             loading="lazy"
+//             src="https://cdn.builder.io/api/v1/image/assets/TEMP/b616506102a7720a0663482c099578abc01ab3bcf202b5483eaef863b9cf6a48?placeholderIfAbsent=true&apiKey=ecbe1396c2284b6a90ede3eda49be9ce"
+//             alt="Scroll to top"
+//             className="object-contain self-end mr-11 aspect-square rounded-[30px] shadow-[4px_4px_4px_rgba(0,0,0,0.25)] w-[60px] max-md:mr-2.5"
+//           />
+//         </a>
+
+//         <Footer />
+//       </div>
+//     </>
+//   );
+// };
+
+// export default OurGallery;

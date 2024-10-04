@@ -8,11 +8,11 @@ const About = () => {
   return (
     <>
    
-       <div>
+       <div className=' bg-zinc-100'>
        <AboutSection2 />
        <HistorySection />
        <AwardsSection />
-         </div>
+        </div>
        <Footer />
     </>
   )

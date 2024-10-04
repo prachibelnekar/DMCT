@@ -11,7 +11,7 @@ const OurTeam = () => {
 
 
                 <AboutSection3 />
-                <AdditionalInfo />
+                
                 <ImageGallery />
 
                 <Footer />

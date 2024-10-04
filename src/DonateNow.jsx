@@ -8,7 +8,7 @@ const DonateNow = () => {
   return (
     <>
     
-    <div className="flex overflow-hidden flex-col bg-white">
+    <div className="flex overflow-hidden flex-col bg-white select-none">
 
        <DonationButtons/>
         <Footer/>

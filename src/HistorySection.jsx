@@ -9,9 +9,9 @@ const HistorySection = () => {
   ];
 
   return (
-    <section className="flex flex-col mt-28 ml-5 w-full max-w-[1240px] text-zinc-800 max-md:mt-10 max-md:max-w-full">
-      <h2 className="text-5xl font-bold leading-none max-md:max-w-full max-md:text-4xl">History of the home</h2>
-      <div className="flex flex-col mt-16 w-full text-3xl font-medium leading-none max-md:mt-10 max-md:max-w-full">
+    <section className="flex flex-col mt-10 ml-5 px-20  max-w-[1240px] text-zinc-800 max-md:mt-10 max-md:max-w-full">
+      <h2 className="text-5xl font-bold leading-none max-md:max-w-full max-md:text-4xl">History of the DMCT</h2>
+      <div className="flex flex-col mt-16 w-full text-xl font-medium leading-none max-md:mt-10 max-md:max-w-full">
         {historyEvents.map((event, index) => (
           <div key={index} className="flex flex-wrap gap-6 mt-5">
             <div className="flex flex-col whitespace-nowrap">

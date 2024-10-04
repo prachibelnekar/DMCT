@@ -14,6 +14,18 @@ const DonationButtons = () => {
     <>
     <div className='mt-10 justify-center'>
       {/* Buttons */}
+      <div className="  ml-20 mt-10  space-x-5">
+            {/* Primary Button */}
+         
+
+            {/* Secondary Button */}
+            <button className="px-4 py-2 w-24 text-blue-500 border shadow-lg h-12 border-blue-500 rounded-lg">
+              Money
+            </button>
+            <button className="px-4 py-2 text-white w-24 bg-blue-400 h-12  hover:bg-blue-600 shadow-lg rounded-lg ">
+               Stuff
+            </button>
+        </div>
       <div className="flex justify-center w-full  text-xl">
         <button
           onClick={() => scrollToForm(donationFormRef)}

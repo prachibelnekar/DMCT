@@ -5,6 +5,7 @@ import AboutSection from './AboutSection';
 import SpecialtiesSection from './SpecialtiesSection';
 import ServicesSection from './ServicesSection';
 import Footer from './Footer';
+import LandingPage from './LandingPage';
 
 
 const Home = () => {
@@ -12,7 +13,7 @@ const Home = () => {
     <>
     <main className="flex overflow-hidden flex-col bg-zinc-100">
       
-      
+      <LandingPage></LandingPage>
       <AboutSection />
       <SpecialtiesSection />
       <ServicesSection />

@@ -16,9 +16,7 @@ const Header = () => {
                   <div className="flex flex-col grow justify-center p-2.5 mt-3  text-5xl text-red-500 max-md:mt-9 max-md:text-4xl">
                     <div className="flex flex-col w-full max-md:text-4xl">
                       <div className="flex gap-2.5 justify-center items-center py-2.5 pr-0.5 pl-1 w-full max-md:text-4xl">
-                        <h1 className="self-stretch my-auto opacity-[var(--sds-size-stroke-border)] w-[390px] max-md:text-4xl">
-                          DMCT Hospital & Oldage Home
-                        </h1>
+                        
                       </div>
                     </div>
                   </div>
@@ -26,7 +24,7 @@ const Header = () => {
               </div>
             </div>
           </div>
-          <ContactInfo />
+          
         </div>
       </div>
     </header>
