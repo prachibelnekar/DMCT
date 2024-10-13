@@ -25,7 +25,7 @@ const ContactDetails = () => {
               DMCT Oldage Hospital
             </h3>
             <div className='text-black text-xl   flex flex-1 gap-0'>
-              <IoLocationOutline className='h-20 w-20 mt-5 '/>
+              <IoLocationOutline className='h-20 w-20 mt-5 ' />
               <NavLink
                 exact
                 className="   hover:text-blue-400 mx-2 pl-1 mt-10"
@@ -41,14 +41,17 @@ const ContactDetails = () => {
             </address> */}
 
             <div className="text-black text-xl mx-2 flex flex-1 gap-3  mt-10 text">
-            <MdOutlineAddIcCall className=' mt-1 h-10 w-10 ' />
-              <p className='hover:text-blue-400'>+91-7738530370 / +91-9833155731 / +91-7977211807 / +91-7021651887</p> 
+              <MdOutlineAddIcCall className=' mt-1 h-7 w-10 ' />
+              <p className='hover:text-blue-400'>+91-7738530370 <br /> +91-9833155731 <br /> +91-7977211807 <br /> +91-7021651887</p>
             </div>
-            <div className="text-black text-xl mx-2 flex flex-1 gap-3  mt-2 ">
-            <CiMail className=' mt-1 h-5 w-5 ' />
-              <a className='hover:text-blue-400' href="mailto:drravindrajadhav2@gmail.com">
-                drravindrajadhav2@gmail.com
-              </a>
+            <div className="text-black text-xl mx-2 flex flex-2 gap-3  mt-7 ">
+              <CiMail className=' mt-1 h-5 w-5 ' />
+
+              <div className="text-lg">
+                <a className='hover:text-blue-400' href="mailto:drravindrajadhav2@gmail.com">drravindrajadhav2@gmail.com</a>
+                <br />
+                <a className='hover:text-blue-400' href="mailto:dmct103@gmail.com">dmct103@gmail.com</a>
+              </div>
             </div>
           </div>
         </div>

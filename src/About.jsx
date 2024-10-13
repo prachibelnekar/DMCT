@@ -8,7 +8,7 @@ const About = () => {
   return (
     <>
    
-       <div className=' bg-zinc-100'>
+       <div className=' bg-white'>
        <AboutSection2 />
        <HistorySection />
        <AwardsSection />

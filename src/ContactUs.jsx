@@ -12,7 +12,7 @@ const ContactUs = () => {
        
        <EnquireNow />
        <ContactDetails />
-       <ScrollToTopButton/>
+       
       <Footer />
      
     </div>

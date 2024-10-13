@@ -12,9 +12,9 @@ const DonationButtons = () => {
 
   return (
     <>
-    <div className='mt-10 justify-center'>
+    <div className='mt-10 flex flex-col items-center'>
       {/* Buttons */}
-      <div className="  ml-20 mt-10  space-x-5">
+      <div className="  flex space-x-5 mt-10 justify-center">
             {/* Primary Button */}
          
 
@@ -23,7 +23,7 @@ const DonationButtons = () => {
               Money
             </button>
             <button className="px-4 py-2 text-white w-24 bg-blue-400 h-12  hover:bg-blue-600 shadow-lg rounded-lg ">
-               Stuff
+               Material 
             </button>
         </div>
       <div className="flex justify-center w-full  text-xl">
@@ -37,7 +37,7 @@ const DonationButtons = () => {
           onClick={() => scrollToForm(stuffDonationFormRef)}
           className="px-10 py-2.5 text-black bg-white rounded-md border border-black hover:bg-blue-600 transition-colors"
         >
-          Stuff
+          Material 
         </button>
       </div>
 

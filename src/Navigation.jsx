@@ -29,7 +29,7 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className="flex flex-col justify-center items-center px-6 py-3 w-full bg-white select-none drop-shadow-md">
+    <nav className="sticky top-0 z-50 flex flex-col justify-center items-center px-6 py-3 w-full bg-white select-none drop-shadow-md">
       <div className="flex flex-wrap justify-between items-center w-full max-w-[1255px]">
         {/* Logo Section */}
         <NavLink to="/" onClick={() => handleLinkClick('/')}>

@@ -1,14 +1,15 @@
 import React from 'react';
+import { IoIosCheckmarkCircle } from 'react-icons/io'; // Importing the icon
 import HistorySection from './HistorySection.jsx';
 import AwardsSection from './AwardsSection.jsx';
 import about from '../src/images/about.jpg';
 
 const AboutSection2 = () => {
   const bulletPoints = [
-    'Lorem ipsum dolor sit amet consectetur.',
-    'Augue non malesuada placerat faucibus nam purus sem.',
-    'Urna pulvinar porttitor dignissim congue pellentesque ac hac.',
-    'Eu adipiscing massa ut proin mauris orci tincidunt ac in.'
+    '24/7 availability of general physicians on-site.',
+    'Easy access to specialists through scheduled appointments.',
+    'Personalized nursing care and regular health monitoring.',
+    'Nutritious, well-balanced meals designed to suit individual dietary needs.'
   ];
 
   return (
@@ -20,7 +21,7 @@ const AboutSection2 = () => {
           <img
             src={about}
             alt="nurse"
-            className="h-[500px] object-contain self-stretch  mt-10 md:mt-0  w-[608px] max-md:w-full max-md:h-auto max-md:mb-5"
+            className="h-[500px] object-contain self-stretch mt-10 md:mt-0 w-[608px] max-md:w-full max-md:h-auto max-md:mb-5"
           />
 
           {/* Text Section */}
@@ -31,14 +32,15 @@ const AboutSection2 = () => {
                 About Us
               </h2>
               {/* Description */}
-              <p className="mt-4 text-lg leading-7 text-zinc-500 max-md:text-base max-md:leading-normal max-md:mt-2">
-                Lorem ipsum dolor sit amet consectetur. Augue non malesuada placerat faucibus nam purus sem. Urna pulvinar porttitor dignissim congue pellentesque ac hac.
+              <p className="mt-4 text-md leading-7 text-zinc-500 max-md:text-base max-md:leading-normal max-md:mt-2">
+                DMCT Oldage Hospital, established in 2005 with just 4 beds, has grown into a 50-bed facility, offering compassionate care for bedridden patients and senior citizens in need of daily assistance. We provide 24/7 access to general physicians, specialist appointments, personalized nursing care, and nutritious meals tailored to individual needs. With open visiting hours around the clock, we prioritize both the medical and emotional well-being of our residents, creating a sanctuary where they can live with dignity, comfort, and respect.
               </p>
             </div>
             {/* Bullet Points */}
             <ul className="flex flex-col items-start text-base leading-loose text-zinc-500 mt-4">
               {bulletPoints.map((point, index) => (
                 <li key={index} className="flex gap-2 items-center">
+                  <IoIosCheckmarkCircle className="text-blue-500 h-5 w-5" /> {/* Bullet point icon */}
                   <span className="self-stretch my-auto">{point}</span>
                 </li>
               ))}

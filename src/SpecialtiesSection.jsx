@@ -88,7 +88,7 @@ const SpecialtiesSection = () => {
                       className="absolute top-10 left-0 mt-2 p-4 bg-white border border-slate-950 rounded-lg text-black w-full shadow-lg max-md:left-auto max-md:right-0 max-md:h-auto max-md:top-8 max-md:bottom-auto max-md:text-base"
                       style={{ zIndex: 9999 }} // Ensure it appears above everything
                     >
-                      <h3 className="text-xl mb-2 max-md:text-xl">{specialty}</h3>
+                      {/* <h3 className="text-xl mb-2 max-md:text-xl">{specialty}</h3> */}
                       <p className="">{specialtyDetails[specialty]}</p>
                     </div>
                   )}

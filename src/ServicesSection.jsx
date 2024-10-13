@@ -1,29 +1,30 @@
 import React from 'react';
 import ServiceCard from './ServiceCard';
 import { FaUserMd, FaUtensils, FaHospitalUser, FaHandsHelping } from 'react-icons/fa';
+import { BiHandicap } from "react-icons/bi";
 import ScrollToTopButton from './ScrollToTopButton';
 
 const ServicesSection = () => {
   const services = [
     {
       icon: <FaUserMd className="w-16 h-16 text-sky-500 rounded-lg shadow-lg" />, // Icon for Resident Care
-      title: "Resident Care",
-      description: "Lorem ipsum dolor sit amet consectetur. Augue non malesuada placerat faucibus nam purus sem. Urna pulvinar porttitor dignissim congue pellentesque ac hac."
+      title: "Medical Care",
+      description: "Our trained staff is dedicated to delivering essential medical care, including medication reminders and regular monitoring of blood sugar and blood pressure. We also facilitate consultations as needed, with a doctor available on call for any urgent medical assistance."
     },
     {
       icon: <FaUtensils className="w-16 h-16 text-sky-500 rounded-lg shadow-lg" />, // Icon for Elderly Nutrition
       title: "Elderly Nutrition",
-      description: "Lorem ipsum dolor sit amet consectetur. Augue non malesuada placerat faucibus nam purus sem. Urna pulvinar porttitor dignissim congue pellentesque ac hac."
+      description: "We prioritize the health and well-being of our elderly residents by providing tailored, nutritious meals that meet their individual dietary needs. Our dedicated staff ensures that every meal not only nourishes but also delights, enhancing their quality of life.."
     },
     {
-      icon: <FaHospitalUser className="w-16 h-16 text-sky-500 rounded-lg shadow-lg" />, // Icon for Skilled Nursing
-      title: "Skilled Nursing",
-      description: "Lorem ipsum dolor sit amet consectetur. Augue non malesuada placerat faucibus nam purus sem. Urna pulvinar porttitor dignissim congue pellentesque ac hac."
+      icon: <BiHandicap className="w-16 h-16 text-sky-500 rounded-lg shadow-lg" />, // Icon for Skilled Nursing
+      title: "Special Needs Care",
+      description: "We prioritize specialized care for individuals with unique needs, providing tailored support to enhance their quality of life. Our dedicated team is committed to ensuring comfort, dignity, and emotional well-being for every resident."
     },
     {
       icon: <FaHandsHelping className="w-16 h-16 text-sky-500 rounded-lg shadow-lg" />, // Icon for Caring Staff
-      title: "Caring Staff",
-      description: "Lorem ipsum dolor sit amet consectetur. Augue non malesuada placerat faucibus nam purus sem. Urna pulvinar porttitor dignissim congue pellentesque ac hac."
+      title: "Homebound Care",
+      description: "We provide compassionate homebound care, ensuring that elderly patients receive personalized support and medical attention in the comfort of their own homes. Our dedicated team of professionals is committed to enhancing their quality of life ."
     }
   ];
 
@@ -39,7 +40,7 @@ const ServicesSection = () => {
           </div>
         </div>
       </div>
-      <ScrollToTopButton />
+      
     </>
   );
 };
