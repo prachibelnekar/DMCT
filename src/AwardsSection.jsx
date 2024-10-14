@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import ScrollToTopButton from './ScrollToTopButton.jsx';
 import award1 from '../src/images/Award_1.jpg';
 import award2 from '../src/images/Award_2.jpg';
 import award3 from '../src/images/Award_3.jpg';
@@ -44,7 +43,7 @@ const AwardsSection = () => {
 
   return (
     <>
-      <div className="mt-10 ml-24 max-md:mt-10 max-md:ml-2.5 mb-20 select-none bg-white pt-20">
+      <div className="mt-10 ml-24  max-md:mt-10 max-md:ml-2.5 mb-20 select-none bg-white pt-20">
         <h2 className="text-5xl font-bold leading-none text-black text-center max-md:text-4xl">
           AWARDS
         </h2>

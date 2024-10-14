@@ -1,7 +1,4 @@
 import React from 'react';
-import { IoIosCheckmarkCircle } from 'react-icons/io'; // Importing the icon
-import HistorySection from './HistorySection.jsx';
-import AwardsSection from './AwardsSection.jsx';
 import about from '../src/images/about.jpg';
 
 const AboutSection2 = () => {
@@ -13,7 +10,7 @@ const AboutSection2 = () => {
   ];
 
   return (
-    <div className="flex overflow-hidden flex-col bg-white select-none">
+    <div className="flex overflow-hidden flex-col bg-white select-none  mx-auto xl:mx-0 2xl:mx-0">
       {/* About Us Section */}
       <section className="flex flex-col px-20 w-full max-md:px-5">
         <div className="flex flex-wrap gap-10 items-center max-md:flex-col max-md:max-w-full">
@@ -21,7 +18,7 @@ const AboutSection2 = () => {
           <img
             src={about}
             alt="nurse"
-            className="h-[500px] object-contain self-stretch mt-10 md:mt-0 w-[608px] max-md:w-full max-md:h-auto max-md:mb-5"
+            className="h-[500px] shadow-2xl shadow-sky-200 p-5  bg-white object-contain self-stretch mt-10 md:mt-0 w-[608px] max-md:w-full max-md:h-auto max-md:mb-5"
           />
 
           {/* Text Section */}
@@ -40,7 +37,12 @@ const AboutSection2 = () => {
             <ul className="flex flex-col items-start text-base leading-loose text-zinc-500 mt-4">
               {bulletPoints.map((point, index) => (
                 <li key={index} className="flex gap-2 items-center">
-                  <IoIosCheckmarkCircle className="text-blue-500 h-5 w-5" /> {/* Bullet point icon */}
+                   <img
+                loading="lazy"
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/480489884ad13b9b7dba30f7f0a8284b0b3ba15d65778a8bbf4cebb383756525?placeholderIfAbsent=true&apiKey=ecbe1396c2284b6a90ede3eda49be9ce"
+                alt="Bullet Point"
+                className="w-6 h-6 object-contain max-md:w-5 max-md:h-5"
+              /> {/* Bullet point icon */}
                   <span className="self-stretch my-auto">{point}</span>
                 </li>
               ))}

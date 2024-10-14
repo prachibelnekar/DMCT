@@ -1,17 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Footer from './Footer';
 
 const StuffDonationForm = () => {
     const navigate = useNavigate();
-    
+    const [uploadedFiles, setUploadedFiles] = useState({});
+
     const handle = () => {
         navigate('/DonationPayment');
     };
 
+    const handleFileChange = (event, view) => {
+        const file = event.target.files[0];
+        if (file) {
+            setUploadedFiles((prevState) => ({
+                ...prevState,
+                [view]: 'Photo uploaded',
+            }));
+        }
+    };
+
     return (
         <div className='select-none'>
-            <div className="ml-20 mt-10 space-x-5 md:ml-10">
+            <div className="flex items-center justify-center  space-x-5 mt-10">
                 <button
                     className="px-4 py-2 text-white w-24 bg-blue-600 h-12 shadow-lg rounded-lg hover:bg-blue-700"
                     onClick={handle}
@@ -113,7 +124,13 @@ const StuffDonationForm = () => {
                                         />
                                         Upload {view}
                                     </label>
-                                    <input type="file" id={`file${index + 1}`} className="sr-only" />
+                                    <input
+                                        type="file"
+                                        id={`file${index + 1}`}
+                                        className="sr-only"
+                                        onChange={(e) => handleFileChange(e, view)}
+                                    />
+                                    <span className="text-gray-400">{uploadedFiles[view]}</span> {/* Show message */}
                                 </div>
                             ))}
                             <div className="text-sm text-gray-600">

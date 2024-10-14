@@ -1,7 +1,5 @@
 import React from 'react';
 import Footer from './Footer.jsx';
-import DonationForm from './DonationForm.jsx';
-import StuffDonationForm from './StuffDonationForm.jsx';
 import DonationButtons from './DonationButtons.jsx';
 
 const DonateNow = () => {

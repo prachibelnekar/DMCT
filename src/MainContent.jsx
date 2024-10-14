@@ -1,13 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router,Routes,Route } from 'react-router-dom';
-import Header from './Header.jsx';
 import Home from './Home.jsx';
 import About from './About.jsx';
 import OurTeam from './OurTeam.jsx';
-import OurGallery from './OurGallery.jsx';
 import Navigation from './Navigation.jsx';
 import ContactUs from './ContactUs.jsx';
-import DonateNow from './DonateNow.jsx';
 import Our_Gallery2 from './Our_Gallery2.jsx'
 import StuffDonationForm from './StuffDonationForm.jsx';
 import DonationForm from './DonationForm.jsx';
@@ -25,7 +22,6 @@ const MainContent = () => {
           <Route path="/our_gallery2" element={<Our_Gallery2/>} />
           <Route path="/contact_us" element={<ContactUs/>} />
           <Route path="/donate_now" element={<DonationForm/>} />
-          <Route path="/our_gallery2/admin/*" element={<OurGallery />}/>
           <Route path='/DonationForm' element={<StuffDonationForm/>}/>
           <Route path='/DonationPayment' element={<DonationForm/>}/>
         </Routes>

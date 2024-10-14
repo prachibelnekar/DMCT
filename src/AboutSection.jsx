@@ -1,6 +1,6 @@
 import React from 'react';
 import Home from '../src/images/Home.jpg';
-import { GoDotFill } from "react-icons/go";
+
 
 const AboutSection = () => {
   const aboutPoints = [
@@ -14,7 +14,7 @@ const AboutSection = () => {
   ];
 
   return (
-    <>
+    < div className=' mx-auto xl:mx-0 2xl:mx-0'>
       <h2 className="text-5xl mt-16 font-bold text-center text-zinc-800 max-md:text-3xl">
         About Us
       </h2>
@@ -23,7 +23,7 @@ const AboutSection = () => {
         <img
           src={Home}
           alt="About Us"
-          className="object-cover self-stretch my-auto w-[608px] h-auto max-md:w-full max-md:h-auto"
+          className="bg-cover shadow-2xl shadow-sky-100 p-5  bg-white  self-stretch my-auto w-[608px] h-auto max-md:w-full max-md:h-auto"
         />
 
         {/* Text Section */}
@@ -47,7 +47,7 @@ const AboutSection = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

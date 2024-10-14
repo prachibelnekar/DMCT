@@ -2,7 +2,7 @@ import React from 'react';
 import ServiceCard from './ServiceCard';
 import { FaUserMd, FaUtensils, FaHospitalUser, FaHandsHelping } from 'react-icons/fa';
 import { BiHandicap } from "react-icons/bi";
-import ScrollToTopButton from './ScrollToTopButton';
+
 
 const ServicesSection = () => {
   const services = [
@@ -30,7 +30,7 @@ const ServicesSection = () => {
 
   return (
     <>
-      <div className="flex flex-col self-center mt-16 w-full max-w-[1348px] px-4 max-md:mt-10 max-md:px-6 select-none">
+      <div className="flex mb-10 flex-col self-center mt-16 w-full max-w-[1348px] px-4 max-md:mt-10 max-md:px-6 select-none">
         <div className="flex flex-col items-center max-md:text-center">
           <h2 className="text-5xl font-bold text-zinc-800 max-md:text-3xl">Our Services</h2>
           <div className="flex flex-wrap gap-6 justify-center mt-16 max-md:mt-10">
@@ -40,7 +40,9 @@ const ServicesSection = () => {
           </div>
         </div>
       </div>
-      
+   
+
+
     </>
   );
 };

@@ -1,6 +1,4 @@
 import React from 'react';
-import Header from './Header';
-import Navigation from './Navigation';
 import AboutSection from './AboutSection';
 import SpecialtiesSection from './SpecialtiesSection';
 import ServicesSection from './ServicesSection';
@@ -17,6 +15,7 @@ const Home = () => {
       <AboutSection />
       <SpecialtiesSection />
       <ServicesSection />
+      
       <Footer />
     </main>
     </>

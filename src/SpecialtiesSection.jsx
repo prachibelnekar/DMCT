@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { IoIosArrowDropdown } from "react-icons/io";
 import Nurse_Patient from '../src/images/Nurse_Patient.jpg';
-
+import down from './images/down.png'
 const SpecialtiesSection = () => {
   const specialties = [
     "Professional Staff",
@@ -80,7 +80,12 @@ const SpecialtiesSection = () => {
                   onMouseEnter={() => setHoveredSpecialty(specialty)}
                   onMouseLeave={() => setHoveredSpecialty(null)}
                 >
-                  <IoIosArrowDropdown className="mr-2" /> {/* Add icon */}
+                <img
+                loading="lazy"
+                src={down}
+                alt="Bullet Point"
+                className="w-6 h-6 object-contain  mr-3 max-md:w-5 max-md:h-5"
+              />  {/* Add icon */}
                   {specialty}
                   {/* Tooltip on hover */}
                   {hoveredSpecialty === specialty && (
