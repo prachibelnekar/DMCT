@@ -5,9 +5,6 @@ import Home from '../src/images/Home.jpg';
 const AboutSection = () => {
   const aboutPoints = [
     "Founded in 2005 with just 4 beds, DMCT Oldage Hospital has grown into a 50-bed facility, known for compassionate and comprehensive care.",
-    "Specializes in caring for bedridden patients and senior citizens who need assistance with daily activities, ensuring dignity and comfort.",
-    "Dedicated staff provides personalized nursing care and prepares nutritious meals tailored to individual health needs.",
-    "Easy access to specialists by appointment, ensuring expert care for specific medical needs.",
     "In-house nursing team ensures timely assistance and continuous health monitoring.",
     "Visiting hours are open 24 hours a day to provide emotional support and maintain family connections.",
     "The mission is to offer a sanctuary for the elderly, where they are treated with care, respect, and compassion.",
