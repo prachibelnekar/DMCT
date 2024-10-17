@@ -13,29 +13,30 @@ const StuffDonationForm = () => {
     const handleFileChange = (event, view) => {
         const file = event.target.files[0];
         if (file) {
+            // Save the file name instead of a static message
             setUploadedFiles((prevState) => ({
                 ...prevState,
-                [view]: 'Photo uploaded',
+                [view]: file.name, // Display file name
             }));
         }
     };
 
     return (
         <div className='select-none'>
-            <div className="flex items-center justify-center  space-x-5 mt-10">
+            <div className="flex items-center justify-center space-x-5 mt-10">
                 <button
                     className="px-4 py-2 text-white w-24 bg-blue-600 h-12 shadow-lg rounded-lg hover:bg-blue-700"
                     onClick={handle}
                 >
                     Money
                 </button>
-                <button className="px-4 py-2 w-24 text-blue-500 border border-blue-500 shadow-lg h-12 rounded-lg ">
+                <button className="px-4 py-2 w-24 text-blue-500 border border-blue-500 shadow-lg h-12 rounded-lg">
                     Material
                 </button>
             </div>
 
-            <div className="flex justify-center  mx-auto items-center mt-10  ">
-                <div className="flex flex-col justify-center items-center p-10 bg-white rounded-2xl border border-blue-400 w-[350px] md:w-[700px] ">
+            <div className="flex justify-center mx-auto items-center mt-10">
+                <div className="flex flex-col justify-center items-center p-10 bg-white rounded-2xl border border-blue-400 w-[350px] md:w-[700px]">
                     <form className="w-full space-y-6">
                         {/* Contact Name */}
                         <div className="flex flex-col">
@@ -115,7 +116,12 @@ const StuffDonationForm = () => {
                         {/* File Uploads */}
                         <div className="flex flex-col space-y-4">
                             {['Top View', 'Front View', 'Side View'].map((view, index) => (
-                                <div key={index} className="flex items-center justify-between border-dashed border-2 border-gray-300 p-1 rounded-lg">
+                                <div
+                                    key={index}
+                                    className={`flex items-center justify-between border-dashed border-2 p-1 rounded-lg ${
+                                        uploadedFiles[view] ? 'bg-green-100 border-green-400' : 'border-gray-300'
+                                    }`}
+                                >
                                     <label htmlFor={`file${index + 1}`} className="text-gray-600 cursor-pointer flex items-center">
                                         <img
                                             src="https://cdn.builder.io/api/v1/image/assets/TEMP/2f440347c849c5017309b81cd4820fe345e2391fbbe5ef88418acc84e7753583"
@@ -130,7 +136,7 @@ const StuffDonationForm = () => {
                                         className="sr-only"
                                         onChange={(e) => handleFileChange(e, view)}
                                     />
-                                    <span className="text-gray-400">{uploadedFiles[view]}</span> {/* Show message */}
+                                    <span className="text-gray-400">{uploadedFiles[view] || 'No file uploaded'}</span> {/* Show file name */}
                                 </div>
                             ))}
                             <div className="text-sm text-gray-600">

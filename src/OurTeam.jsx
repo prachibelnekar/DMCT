@@ -24,9 +24,9 @@ const OurTeam = () => {
                                     <div className="flex flex-col text-3xl font-bold text-black leading-[58px] max-md:text-4xl max-md:leading-[54px]">
                                         <h4>Dr. Ravindra Jadhav</h4>
                                         <p className="mt-5 text-lg text-gray-700 max-md:mt-3 max-md:text-base">
-                                            <strong>Qualification:</strong> Ph.D. in Computer Science<br />
-                                            <strong>Experience:</strong> 15+ years in teaching and research<br />
-                                            <strong>Specialization:</strong> Artificial Intelligence, Data Science, Machine Learning
+                                            <strong>Qualification:</strong>B.A.M.S., M.D.Alternate Medicine<br />
+                                            <strong>Experience:</strong> 15+ years <br />
+                                            <strong>Ongoing Projects:</strong> Street Children Hostel, Children Orphanage , Old Age Home.
                                         </p>
                                     </div>
                                 </div>

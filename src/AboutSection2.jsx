@@ -18,7 +18,7 @@ const AboutSection2 = () => {
           <img
             src={about}
             alt="nurse"
-            className="h-[500px] shadow-2xl shadow-sky-200 p-5  bg-white object-contain self-stretch mt-10 md:mt-0 w-[608px] max-md:w-full max-md:h-auto max-md:mb-5"
+            className="h-[600px] shadow-2xl shadow-sky-200 p-5  bg-white object-contain self-stretch mt-10 md:mt-0 w-[608px] max-md:w-full max-md:h-auto max-md:mb-5"
           />
 
           {/* Text Section */}

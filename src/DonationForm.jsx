@@ -1,9 +1,7 @@
 import React from 'react';
-import { HiCreditCard } from "react-icons/hi2";
-import { SiPaytm } from "react-icons/si";
-import { PiBankFill } from "react-icons/pi";
 import { useNavigate } from 'react-router-dom';
 import Footer from './Footer';
+import QR from '../src/images/QR.jpeg';
 
 const DonationForm = () => {
 
@@ -13,8 +11,7 @@ const DonationForm = () => {
   }
 
   const handleGPay = () => {
-    // Replace 'gpay_url' with your actual Google Pay link or intent URL
-    window.open('https://gpay.app.goo.gl/pay-url', '_blank');
+    window.open('upi://pay?pa=gpay-11193330128@okbizaxis&mc=5399&pn=Google%20Pay%20Merchant&oobe=fos123&qrst=stn&tr=1193330128&cu=INR', '_blank');
   }
 
   return (
@@ -28,24 +25,41 @@ const DonationForm = () => {
         </button>
       </div>
 
-      {/* Scanner image section */}
-      <div className="flex flex-col items-center justify-center mt-8">
-        <p className="mb-4">Scan the QR code to donate:</p>
-        <img
-          src="path_to_your_scanner_image.jpg"
-          alt="QR Scanner"
-          className="w-48 h-48 border border-gray-300 shadow-lg rounded-lg"
-        />
-      </div>
+      {/* Donation section with bank details and QR code */}
+      <div className="flex flex-col md:flex-row justify-center items-center mt-8 space-y-8 md:space-y-0 md:space-x-8">
 
-      {/* Google Pay button */}
-      <div className="flex items-center justify-center mt-5">
-        <button
-          className="px-4 py-2 text-white bg-sky-500 shadow-lg rounded-lg"
-          onClick={handleGPay}
-        >
-          Pay with GPay
-        </button>
+        {/* Bank details section */}
+        <div className="md:w-1/2 w-full border p-5 rounded-lg shadow-lg">
+          <h3 className="text-xl font-semibold mb-4">Bank Details</h3>
+          <textarea
+            className="w-full h-48 p-2 border rounded-lg border-gray-300"
+            readOnly
+            value={`Bank Name: Bank of Baroda
+Account Name: Doctor Mitra Charitable Trust
+Account Number: 27690200000209
+IFSC Code: BARB0TISGAO
+Branch: Tisgaon Naka ,Kalyan(E)`}
+          />
+        </div>
+
+        {/* QR code and Google Pay button section */}
+        <div className="flex flex-col items-center">
+          <p className="mb-4">Scan the QR code to donate:</p>
+          <img
+            src={QR}
+            alt="QR Scanner"
+            className="w-48 h-48 border border-gray-300 shadow-lg rounded-lg"
+          />
+
+          <div className="flex items-center justify-center mt-5">
+            <button
+              className="px-4 py-2 text-white bg-sky-500 shadow-lg rounded-lg"
+              onClick={handleGPay}
+            >
+              Pay with GPay
+            </button>
+          </div>
+        </div>
       </div>
 
       <Footer />
